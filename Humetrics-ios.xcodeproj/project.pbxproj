@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		9D743EB81E39315A006E887E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743EB71E39315A006E887E /* AppDelegate.swift */; };
-		9D743EBA1E39315A006E887E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743EB91E39315A006E887E /* ViewController.swift */; };
+		9D743EBA1E39315A006E887E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743EB91E39315A006E887E /* MainViewController.swift */; };
 		9D743EBD1E39315B006E887E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D743EBB1E39315B006E887E /* Main.storyboard */; };
 		9D743EBF1E39315B006E887E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D743EBE1E39315B006E887E /* Assets.xcassets */; };
 		9D743EC21E39315B006E887E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D743EC01E39315B006E887E /* LaunchScreen.storyboard */; };
+		9D743ECA1E393D18006E887E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743EC91E393D18006E887E /* LoginViewController.swift */; };
+		9D743ECC1E393D3C006E887E /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743ECB1E393D3C006E887E /* MetricViewController.swift */; };
+		9D743ECE1E3947B6006E887E /* UserDefaults+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743ECD1E3947B6006E887E /* UserDefaults+Utils.swift */; };
+		9D743ED11E395E43006E887E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743ED01E395E43006E887E /* WebService.swift */; };
+		9D743ED31E395E95006E887E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743ED21E395E95006E887E /* API.swift */; };
+		9D743ED51E396265006E887E /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D743ED41E396265006E887E /* Metric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D743EB41E39315A006E887E /* Humetrics-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Humetrics-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D743EB71E39315A006E887E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D743EB91E39315A006E887E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D743EB91E39315A006E887E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9D743EBC1E39315B006E887E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D743EBE1E39315B006E887E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D743EC11E39315B006E887E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D743EC31E39315B006E887E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D743EC91E393D18006E887E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D743ECB1E393D3C006E887E /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricViewController.swift; sourceTree = "<group>"; };
+		9D743ECD1E3947B6006E887E /* UserDefaults+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Utils.swift"; sourceTree = "<group>"; };
+		9D743ED01E395E43006E887E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		9D743ED21E395E95006E887E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9D743ED41E396265006E887E /* Metric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,28 @@
 		9D743EB61E39315A006E887E /* Humetrics-ios */ = {
 			isa = PBXGroup;
 			children = (
+				9D743ECF1E395BA8006E887E /* API */,
+				9D743ECD1E3947B6006E887E /* UserDefaults+Utils.swift */,
 				9D743EB71E39315A006E887E /* AppDelegate.swift */,
-				9D743EB91E39315A006E887E /* ViewController.swift */,
+				9D743EB91E39315A006E887E /* MainViewController.swift */,
 				9D743EBB1E39315B006E887E /* Main.storyboard */,
 				9D743EBE1E39315B006E887E /* Assets.xcassets */,
 				9D743EC01E39315B006E887E /* LaunchScreen.storyboard */,
 				9D743EC31E39315B006E887E /* Info.plist */,
+				9D743EC91E393D18006E887E /* LoginViewController.swift */,
+				9D743ECB1E393D3C006E887E /* MetricViewController.swift */,
 			);
 			path = "Humetrics-ios";
+			sourceTree = "<group>";
+		};
+		9D743ECF1E395BA8006E887E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9D743ED01E395E43006E887E /* WebService.swift */,
+				9D743ED21E395E95006E887E /* API.swift */,
+				9D743ED41E396265006E887E /* Metric.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D743EBA1E39315A006E887E /* ViewController.swift in Sources */,
+				9D743ED11E395E43006E887E /* WebService.swift in Sources */,
+				9D743ECC1E393D3C006E887E /* MetricViewController.swift in Sources */,
+				9D743ECA1E393D18006E887E /* LoginViewController.swift in Sources */,
+				9D743ED51E396265006E887E /* Metric.swift in Sources */,
+				9D743EBA1E39315A006E887E /* MainViewController.swift in Sources */,
 				9D743EB81E39315A006E887E /* AppDelegate.swift in Sources */,
+				9D743ED31E395E95006E887E /* API.swift in Sources */,
+				9D743ECE1E3947B6006E887E /* UserDefaults+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

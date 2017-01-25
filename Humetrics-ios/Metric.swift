@@ -7,3 +7,33 @@
 //
 
 import Foundation
+
+struct Metric {
+
+	let sender: String
+	let metric: String
+	let value: Float
+	let timestamp: Date
+}
+
+extension Metric {
+
+	init?(json: JSONDictionary) {
+		guard let sender = json["sender"] as? String else { return nil }
+		guard let metric = json["metric"] as? String else { return nil }
+		guard let value = json["value"] as? Float else { return nil }
+
+		self.sender = sender
+		self.metric = metric
+		self.value = value
+		self.timestamp = Date()
+	}
+}
+
+extension Metric {
+
+	func post() {
+
+	}
+
+}

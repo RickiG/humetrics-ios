@@ -8,26 +8,25 @@
 
 import Foundation
 
-enum PETAAPI {
+enum API {
 
-	case feed
-	case categories
-	case itemsFromQuery(query: String)
-	case itemsFromTag(tag: String)
+	case postMetric(json: [String : Any])
+	case metrics
+	case metric(id: Int)
 
 	var baseURL: URL {
-		return URL(string: "https://petazwei.herokuapp.com/api/")!
-//		return URL(string: "https://peta2-yatg-staging.herokuapp.com/api/")!
+//		return URL(string: "https://humetrics.herokuapp.com")!
+		return URL(string: "localhost:8080/")!
 	}
 
 	var path: String {
 		switch self {
-		case .feed:
-			return "feed"
-		case .categories:
-			return "categories"
-		case .itemsFromTag, .itemsFromQuery:
-			return "search"
+		case .postMetric:
+			return "metric"
+		case .metrics:
+			return "metrics"
+		case .metric(let id):
+			return "metric/\(id)"
 		}
 	}
 
@@ -60,12 +59,6 @@ enum PETAAPI {
 	var queryItems: [URLQueryItem]? {
 
 		switch self {
-		case .itemsFromQuery(let query):
-			return [URLQueryItem(name: "query", value: query)]
-
-		case .itemsFromTag(let tag):
-			return [URLQueryItem(name: "tag", value: tag)]
-
 		default:
 			return nil
 		}
@@ -74,8 +67,9 @@ enum PETAAPI {
 	var fixedHeaders: [String : String] {
 
 		return [
-			"api-user-key"		: "87834zuhf8u20sah9904hfjashd828934twifhsd2398489295wfh",
-			"close"				: "Connection"
+			"app" : "v1"
+//			"api-user-key"		: "87834zuhf8u20sah9904hfjashd828934twifhsd2398489295wfh",
+//			"close"				: "Connection"
 		]
 	}
 }
